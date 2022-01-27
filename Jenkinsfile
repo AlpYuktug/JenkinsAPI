@@ -5,7 +5,7 @@ pipeline {
     }
         stage('Build'){
            steps{
-               sh 'dotnet build JenkinsAPI.sln --configuration Release --no-restore'
+               bat 'dotnet build JenkinsAPI.sln --configuration Release --no-restore'
             }
          }
     }
