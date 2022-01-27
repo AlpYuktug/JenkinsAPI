@@ -1,12 +1,10 @@
 pipeline {
-    agent any
-    triggers {
-        githubPush()
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Build Message'
+      }
     }
-        stage('Build'){
-           steps{
-               bat 'dotnet build JenkinsAPI.sln --configuration Release --no-restore'
-            }
-         }
-    }
-}
+  }
+} 
